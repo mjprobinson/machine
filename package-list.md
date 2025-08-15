@@ -1,10 +1,10 @@
 # Packages
 ## Bootstrap
-[] jq
-[] git
+[x] jq
+[x] git
+[x] stow
 
 ## Base
-[x] stow - cli-tools
 [x] fzf - cli-tools
 [x] btop - cli-tools
 [x] tldr - cli-tools
@@ -12,13 +12,13 @@
 [x] atuin
 [x] kitty
 [x] zsh
-[] oh my zsh
+[x] oh my zsh
 [x] jetbrains-mono font
 [x] starship
-[] tmux
-[] bitwarden-cli
-[] dotfiles
-[] neovim
+[x] tmux
+[x] bitwarden-cli
+[x] dotfiles
+[x] neovim
 [] syncthing
 
 ## Dev
