@@ -7,3 +7,6 @@ unzip bitwarden-cli.zip
 chmod +x bw
 mv bw ~/.local/bin/
 rm bitwarden-cli.zip
+
+bw login
+export BW_SESSION=$(bw --raw unlock)

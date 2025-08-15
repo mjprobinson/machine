@@ -19,29 +19,29 @@
 [x] bitwarden-cli
 [x] dotfiles
 [x] neovim
-[] syncthing
+[x] syncthing
 
 ## Dev
-[] uv
-[] ruff
+[x] uv
+[x] ruff
 [] ruff config
-[] go
-[] docker
+[x] go
+[x] docker
 
 ## Client
-[] sway
-[] swaylock
-[] swayexit
-[] waybar
-[] grimshot
-[] sshfs
+[x] sway
+[x] swaylock
+[x] swayidle
+[x] waybar
+[x] grimshot
+[x] sshfs
 [] home vpn config
-[] wireguard
-[] wireguard tools
+[x] wireguard
+[x] wireguard tools
 [] ssh-keys
 
 ## Server
-[] openssh-server
+[x] openssh-server
 [] authorized-keys
 [] ssh config
 [] ssh-keys
