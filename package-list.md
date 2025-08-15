@@ -9,12 +9,12 @@
 [x] btop - cli-tools
 [x] tldr - cli-tools
 [x] ripgrep - cli-tools
-[] atuin
-[] kitty
-[] zsh
+[x] atuin
+[x] kitty
+[x] zsh
 [] oh my zsh
-[] jetbrains-mono font
-[] starship
+[x] jetbrains-mono font
+[x] starship
 [] tmux
 [] bitwarden-cli
 [] dotfiles
