@@ -35,13 +35,13 @@
 [x] waybar
 [x] grimshot
 [x] sshfs
-[] home vpn config
+[x] home vpn config
 [x] wireguard
 [x] wireguard tools
-[] ssh-keys
+[x] ssh-keys
 
 ## Server
 [x] openssh-server
 [] authorized-keys
 [] ssh config
-[] ssh-keys
+[x] ssh-keys

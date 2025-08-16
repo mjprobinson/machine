@@ -4,7 +4,7 @@ src_dir=$(dirname $(dirname $(realpath "$0")))
 source "$src_dir/utils.sh"
 bw_unlock
 
-keys=("mr-server" "mjprobinson-github")
+keys=(mjprobinson-github" "network-tools" "truenas-admin")
 
 for key in "${keys[@]}"; do
   bw_key=$(bw list items --search "$key")

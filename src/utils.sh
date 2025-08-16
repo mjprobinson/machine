@@ -2,7 +2,7 @@
 
 bw_unlock() {
 if [[ $(bw status | jq -r '.status') == "unlocked" ]]; then
-    exit 0
+    return 0
 fi
 
 unlocked=false
