@@ -24,7 +24,7 @@
 ## Dev
 [x] uv
 [x] ruff
-[] ruff config
+[x] ruff config
 [x] go
 [x] docker
 
