@@ -23,16 +23,22 @@ else
     done
 fi
 
-package_to_install=()
+installs=()
 for package in "${packages[@]}"; do
     if ! echo "$avail_packages" | grep -q "$package"; then
         echo "Package '$package' is not an available package"
         echo "Must be one of '$(sed ':a;N;$!ba;s/\n/, /g' <<< "$avail_packages")'"
         exit 1
     fi
-    packages_to_install+=($(cat "$packages_dir/$package"))
+    installs+=($(cat "$packages_dir/$package"))
 done
 
-for install in "${packages_to_install[@]}"; do
+# Michael, you are here. Installs and updates are up and running.
+# Make the install logic and then work out the below todo.
+# Probably make that a variable as this script will be sourced in the main script
+# TODO, work out this logic with the install script
+echo "${installs[@]}" > ./installed
+
+for install in "${installs[@]}"; do
     run "$installs_dir/$install.sh"
 done
