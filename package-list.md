@@ -42,6 +42,6 @@
 
 ## Server
 [x] openssh-server
-[] authorized-keys
+[x] authorized-keys
 [] ssh config
 [x] ssh-keys

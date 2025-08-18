@@ -10,3 +10,4 @@ rm bitwarden-cli.zip
 
 bw login
 export BW_SESSION=$(bw --raw unlock)
+bw sync

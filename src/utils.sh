@@ -19,3 +19,18 @@ if ! $unlocked; then
     exit 1
 fi
 }
+
+log() {
+    if $dry_run; then
+        echo "[DRY RUN]: $1"
+    else
+        echo "$1"
+    fi
+}
+
+run() {
+    log "$1"
+    if ! $dry_run; then
+        source "$1"
+    fi
+}
