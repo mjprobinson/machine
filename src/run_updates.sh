@@ -16,6 +16,10 @@ if [ $# -gt 0 ]; then
     exit 1
 if
 
+if [ ! -f "$tracked_installs_location" ]; then
+    echo "No tracked installs found. Run 'machine install' first."
+    exit 1
+fi
 tracked_installs=($(cat "$tracked_installs_location")
 if ! $dry_run; then
     sudo apt update && sudo apt upgrade -y
