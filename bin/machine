@@ -13,10 +13,12 @@ help() {
 root_dir=$(dirname $(dirname $(realpath "$0")))
 case "$1" in
     install)
-        bash "$root_dir/src/run_installs.sh"
+        shift
+        bash "$root_dir/src/run_installs.sh" "$@"
         ;;
     update)
-        bash "$root_dir/src/run_updates.sh"
+        shift
+        bash "$root_dir/src/run_updates.sh" "$@"
         ;;
     *)
         help
