@@ -32,12 +32,9 @@ for package in "${packages[@]}"; do
     fi
     installs+=($(cat "$packages_dir/$package"))
 done
-
-# Michael, you are here. Installs and updates are up and running.
-# Make the install logic and then work out the below todo.
-# Probably make that a variable as this script will be sourced in the main script
-# TODO, work out this logic with the install script
-echo "${installs[@]}" > ./installed
+if ! $dry_run; then
+    echo "${installs[@]}" > "$tracked_installs_location"
+fi
 
 for install in "${installs[@]}"; do
     run "$installs_dir/$install.sh"

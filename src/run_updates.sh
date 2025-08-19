@@ -6,12 +6,17 @@ updates_dir="$script_dir/updates"
 
 source "$script_dir/utils.sh"
 
-if [ $1 == "--dry-run" ]; then
+if [ "$1" == "--dry-run" ]; then
     dry_run=true
+    shift
 fi
 
-# TODO, work out this logic with the install script
-tracked_installs=($(cat "$HOME/machine/installed"))
+if [ $# -gt 0 ]; then
+    echo "updates received bad option."
+    exit 1
+if
+
+tracked_installs=($(cat "$tracked_installs_location")
 if ! $dry_run; then
     sudo apt update && sudo apt upgrade -y
 fi
