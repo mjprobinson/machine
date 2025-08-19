@@ -5,6 +5,7 @@ script_dir=$(dirname $(realpath "$0"))
 installs_dir="$script_dir/installs"
 packages_dir="$script_dir/packages"
 avail_packages=$(find "$script_dir/packages" -mindepth 1 -maxdepth 1 -type f -exec basename {} \;)
+tracked_installs_location=$HOME/.local/share/machine/tracked_installs
 
 source "$script_dir/utils.sh"
 

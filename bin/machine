@@ -10,14 +10,13 @@ help() {
     echo "  --dry-run    Don't run install/update commands. Only show what would be run."
 }
 
-tracked_installs_location=$HOME/.local/share/machine/tracked_installs
 root_dir=$(dirname $(dirname $(realpath "$0")))
 case "$1" in
     install)
-        source "$root_dir/src/run_installs.sh"
+        bash "$root_dir/src/run_installs.sh"
         ;;
     update)
-        source "$root_dir/src/run_updates.sh"
+        bash "$root_dir/src/run_updates.sh"
         ;;
     *)
         help
