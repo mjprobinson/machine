@@ -1,10 +1,5 @@
 #!/usr/bin/bash
 
-if [ ! -d ~/.dotfiles ]; then
-    script_dir=$(dirname $(realpath "$0"))
-    source "$script_dir/dotfiles.sh"
-fi
-
 # https://github.com/tmux/tmux/wiki/Installing
 sudo apt install -y tmux
 

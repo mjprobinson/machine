@@ -1,7 +1,5 @@
 #!/usr/bin/bash
 
-src_dir=$(dirname $(dirname $(realpath "$0")))
-source "$src_dir/utils.sh"
 bw_unlock
 
 keys=(mjprobinson-github" "network-tools" "truenas-admin")

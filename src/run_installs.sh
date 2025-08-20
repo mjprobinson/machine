@@ -39,10 +39,5 @@ fi
 
 run "$installs_dir/bootstrap.sh"
 for install in "${installs[@]}"; do
-    # Michael, you are here. Because you use source instead of bash to call the scripts
-    # the $0 never changes. This means that any sourcing you do in the install/update 
-    # scripts is wrong. The plus side, since utils is already sourced you probably 
-    # can drop most of the need. But you will need to fix this in all the update scripts
-    # and check all the installs to make sure the realpath isn't used
     run "$installs_dir/$install.sh"
 done

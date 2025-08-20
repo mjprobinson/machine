@@ -1,4 +1,3 @@
 #!/usr/bin/bash
 
-src_dir=$(dirname $(dirname $(realpath "$0")))
-source "$src_dir/installs/kitty.sh"
+source "$installs_dir/kitty.sh"

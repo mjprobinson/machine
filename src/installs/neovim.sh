@@ -1,10 +1,5 @@
 #!/usr/bin/bash
 
-if [ ! -d ~/.dotfiles ]; then
-    script_dir=$(dirname $(realpath "$0"))
-    source "$script_dir/dotfiles.sh"
-fi
-
 download_url=$(curl -s https://api.github.com/repos/neovim/neovim/releases/latest | jq '.assets | .[] | select(.name == "nvim-linux-x86_64.tar.gz") | .browser_download_url')
 wget "$download"
 
