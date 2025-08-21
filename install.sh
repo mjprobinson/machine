@@ -12,5 +12,5 @@ else
     cp -r "$root_dir" "$install_location"
 fi
 pushd "$install_location/machine"
-ln -sf "$install_location/machine/bin/machine" $HOME/.local/bin
+ln -sf "$install_location/machine/bin/machine" $HOME/.local/bin/
 popd

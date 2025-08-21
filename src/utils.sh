@@ -24,7 +24,7 @@ log() {
     if $dry_run; then
         echo "[DRY RUN]: $1"
     else
-        echo "$1"
+        echo "RUNNING: $1"
     fi
 }
 

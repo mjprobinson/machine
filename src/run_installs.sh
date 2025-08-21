@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+set -e
+
 dry_run=false
 script_dir=$(dirname $(realpath "$0"))
 installs_dir="$script_dir/installs"
@@ -34,6 +36,7 @@ for package in "${packages[@]}"; do
     installs+=($(cat "$packages_dir/$package"))
 done
 if ! $dry_run; then
+    mkdir -p $(dirname "$tracked_installs_location")
     echo "${installs[@]}" > "$tracked_installs_location"
 fi
 
