@@ -14,3 +14,5 @@ fi
 pushd "$install_location/machine"
 ln -sf "$install_location/machine/bin/machine" $HOME/.local/bin/
 popd
+
+export PATH=$PATH:$HOME/.local/bin/
