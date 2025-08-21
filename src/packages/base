@@ -1,11 +1,11 @@
 cli-tools
-atuin
-kitty
-zsh
-oh-my-zsh
 jetbrains-mono
-starship
 tmux
-bitwarden-cli
 neovim
 syncthing
+bitwarden-cli
+atuin
+starship
+zsh
+oh-my-zsh
+kitty
