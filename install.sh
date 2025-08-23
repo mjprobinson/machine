@@ -9,6 +9,10 @@ if [ -d "$install_location/machine" ]; then
 else
     mv "$root_dir" "$install_location"
 fi
+
+if [ ! -d $HOME/.local/bin/ ]; then
+    mkdir $HOME/.local/bin
+fi
 pushd "$install_location/machine"
 ln -sf "$install_location/machine/bin/machine" $HOME/.local/bin/
 popd
