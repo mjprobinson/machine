@@ -2,6 +2,4 @@
 
 # https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
 sudo apt install -y zsh
-sudo bash <<EOF
-    chsh -s $(which zsh)
-EOF
+sudo chsh -s $(which zsh)
