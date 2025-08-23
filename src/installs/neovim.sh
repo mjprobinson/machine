@@ -8,7 +8,7 @@ if [ ! -d ~/.local/share/applications/ ]; then
   mkdir ~/.local/share/applications/
 fi
 tar -xzf nvim-linux-x86_64.tar.gz -C ~/.local/share/applications/
-ln -s ~/.local/share/applications/nvim-linux-x86_64/bin/nvim ~/.local/bin/
+ln -sf ~/.local/share/applications/nvim-linux-x86_64/bin/nvim ~/.local/bin/
 rm nvim-linux-x86_64.tar.gz
 
 # Plugins
