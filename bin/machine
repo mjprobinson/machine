@@ -18,7 +18,7 @@ case "$1" in
         ;;
     update)
         shift
-        bash "$root_dir/src/run_updates.sh" "$@"
+        zsh "$root_dir/src/run_updates.sh" "$@"
         ;;
     *)
         help

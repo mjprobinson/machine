@@ -1,5 +1,3 @@
-#!/usr/bin/bash
-
 set -e
 
 dry_run=false
