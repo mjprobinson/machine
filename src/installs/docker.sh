@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+# https://docs.docker.com/engine/install/debian/
 # Add Docker's official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl
@@ -16,7 +17,7 @@ sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
+# https://docs.docker.com/engine/install/linux-postinstall/
 # Post install
 sudo groupadd docker
 sudo usermod -aG docker $USER
-newgrp docker
