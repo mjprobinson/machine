@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 set -e
 
 dry_run=false
@@ -8,7 +10,7 @@ tracked_installs_location="$HOME/.local/share/machine/tracked_installs"
 
 source "$script_dir/utils.sh"
 
-if [ "$1" == "--dry-run" ]; then
+if [[ "$1" == "--dry-run" ]]; then
     dry_run=true
     shift
 fi

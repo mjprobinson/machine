@@ -1,5 +1,3 @@
-#!/usr/bin/bash
-
 download_url=$(curl -s https://api.github.com/repos/neovim/neovim/releases/latest | jq -r '.assets | .[] | select(.name == "nvim-linux-x86_64.tar.gz") | .browser_download_url')
 wget "$download_url"
 

@@ -1,5 +1,3 @@
-#!/usr/bin/bash
-
 # https://github.com/tmux/tmux/wiki/Installing
 sudo apt install -y tmux
 

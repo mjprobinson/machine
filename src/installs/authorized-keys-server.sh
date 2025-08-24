@@ -1,5 +1,3 @@
-#!/usr/bin/bash
-
 bw_unlock
 
 keys=("mr-server")

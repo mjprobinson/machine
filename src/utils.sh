@@ -1,5 +1,3 @@
-#!/usr/bin/bash
-
 bw_unlock() {
 if [[ $(bw status | jq -r '.status') == "unlocked" ]]; then
     return 0

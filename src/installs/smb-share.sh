@@ -1,5 +1,3 @@
-#!/usr/bin/bash
-
 bw_unlock
 
 # https://itslinuxfoss.com/mount-smb-shares-ubuntu-22-04/

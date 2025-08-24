@@ -1,5 +1,3 @@
-#!/usr/bin/bash
-
 sudo apt install -y sway swayidle swaylock waybar grimshot
 
 # For screen sharing
