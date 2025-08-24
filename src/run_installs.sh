@@ -38,11 +38,20 @@ for package in "${packages[@]}"; do
 done
 
 if ! $dry_run; then
-    if [[ ! -d $(dirname "$tracked_installs_location") ]]; then
+    tracked_installs=()
+    if [ ! -f "$tracked_installs_location" ]; then
         first_run=true
         mkdir -p $(dirname "$tracked_installs_location")
+    else
+        tracked_installs=($(cat "$tracked_installs_location"))
     fi
-    echo "${installs[@]}" >> "$tracked_installs_location"
+    for install in "${installs[@]}"; do
+        if string_in_array "$install" "${tracked_installs[@]}"; then
+            continue
+        fi
+        tracked_installs+=("$install")
+    done
+    echo "${tracked_installs[@]}" > "$tracked_installs_location"
 fi
 
 if $first_run; then

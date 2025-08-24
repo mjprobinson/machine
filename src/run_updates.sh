@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+set -e
+
 dry_run=false
 script_dir=$(dirname $(realpath "$0"))
 updates_dir="$script_dir/updates"

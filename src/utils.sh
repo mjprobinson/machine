@@ -34,3 +34,10 @@ run() {
         source "$1"
     fi
 }
+
+string_in_array() {
+    string="$1"
+    shift
+    arr=("$@")
+    echo "${arr[@]}" | grep -q "$string"
+}
