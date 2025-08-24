@@ -6,7 +6,7 @@ chmod +x bw
 mv bw ~/.local/bin/
 rm bitwarden-cli.zip
 
-if bw status | jq 'has("userEmail")'; then
+if ! bw status | jq 'has("userEmail")'; then
   bw login
 fi
 export BW_SESSION=$(bw --raw unlock)
