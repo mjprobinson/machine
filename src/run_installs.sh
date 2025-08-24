@@ -3,6 +3,7 @@
 set -e
 
 dry_run=false
+first_run=false
 script_dir=$(dirname $(realpath "$0"))
 installs_dir="$script_dir/installs"
 packages_dir="$script_dir/packages"
@@ -35,12 +36,18 @@ for package in "${packages[@]}"; do
     fi
     installs+=($(cat "$packages_dir/$package"))
 done
+
 if ! $dry_run; then
-    mkdir -p $(dirname "$tracked_installs_location")
-    echo "${installs[@]}" > "$tracked_installs_location"
+    if [[ ! -d $(dirname "$tracked_installs_location") ]]; then
+        first_run=true
+        mkdir -p $(dirname "$tracked_installs_location")
+    fi
+    echo "${installs[@]}" >> "$tracked_installs_location"
 fi
 
-run "$installs_dir/bootstrap.sh"
+if $first_run; then
+    run "$installs_dir/bootstrap.sh"
+fi
 for install in "${installs[@]}"; do
     run "$installs_dir/$install.sh"
 done
