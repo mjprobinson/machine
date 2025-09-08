@@ -17,5 +17,8 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 # https://docs.docker.com/engine/install/linux-postinstall/
 # Post install
-sudo groupadd docker
+## Added because ubuntu comes with a docker group apparently
+if ! $(getent group docker); then
+  sudo groupadd docker
+fi
 sudo usermod -aG docker $USER
