@@ -24,7 +24,7 @@ if [ ! -f "$tracked_installs_location" ]; then
 fi
 
 tracked_installs=($(cat "$tracked_installs_location"))
-if [ ! $dry_run ]; then
+if ! $dry_run ; then
     sudo apt update && sudo apt upgrade -y
 fi
 for update in "${tracked_installs[@]}"; do
