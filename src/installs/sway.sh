@@ -1,4 +1,7 @@
-sudo apt install -y sway swayidle swaylock waybar grimshot blueman nm-tray brightnessctl pulseaudio-utils
+# Sway
+sudo apt install -y sway swayidle swaylock waybar 
+# WM Utils
+sudo apt install -y grimshot blueman nm-tray brightnessctl pavucontrol pulseaudio-utils
 
 # For screen sharing
 sudo apt install -y xdg-desktop-portal xdg-desktop-portal-wlr
