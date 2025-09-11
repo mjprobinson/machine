@@ -1,5 +1,5 @@
 # Sway
-sudo apt install -y sway swayidle swaylock waybar 
+sudo apt install -y sway swayidle swaylock waybar sway-notification-center
 # WM Utils
 sudo apt install -y grimshot blueman nm-tray brightnessctl pavucontrol pulseaudio-utils
 
