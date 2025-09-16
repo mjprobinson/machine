@@ -7,7 +7,9 @@ mv bw ~/.local/bin/
 rm bitwarden-cli.zip
 
 if ! $(bw status | jq 'has("userEmail")'); then
-  bw login
+  export BW_SESSION=$(bw --raw login)
 fi
-export BW_SESSION=$(bw --raw unlock)
+if [[ ! $(bw status | jq -r '.status') == "unlocked" ]]; then
+  export BW_SESSION=$(bw --raw unlock)
+fi
 bw sync
