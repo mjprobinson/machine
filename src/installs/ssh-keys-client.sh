@@ -10,4 +10,5 @@ for key in "${keys[@]}"; do
   chmod 600 "$HOME/.ssh/$name"
 done
 
-
+sudo mkdir /mnt/mr-server/
+chown $USER /mnt/mr-server/
