@@ -1,6 +1,6 @@
 bw_unlock
 
-keys=(mjprobinson-github" "network-tools" "truenas-admin")
+keys=("mjprobinson-github" "network-tools" "truenas-admin")
 
 for key in "${keys[@]}"; do
   bw_key=$(bw list items --search "$key")
